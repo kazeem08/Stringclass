@@ -2,7 +2,7 @@ String.prototype.hasVowels = function () {
     //Code here
 }
 
-String.prototype.toupper = function () {
+String.prototype.toUpper = function () {
     //Code here
 }
 
