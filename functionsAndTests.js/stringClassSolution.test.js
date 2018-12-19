@@ -66,3 +66,13 @@ describe('test for ucFirst', () => {
         expect('Welcome'.ucFirst()).not.toBe('welcome')
     })
 })
+
+describe('test for isQuestion', () => {
+    test('string that ends with ?', () => {
+        expect('eaten?'.isQuestion()).toBeTruthy()
+    })
+
+    test('string that ends with ?', () => {
+        expect('sleeping'.isQuestion()).toBeFalsy()
+    })
+})
