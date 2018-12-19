@@ -16,7 +16,6 @@ describe('test for Vowels', () => {
     test("string that contain only special characters", () => {
         expect('jdtddg'.hasVowels()).toBeFalsy()
     })
-    
 
 })
 
@@ -26,7 +25,7 @@ describe('test for toUpper', () => {
     })
 
     test('string that is completely uppercase', () => {
-        expect('MANG0)'.toUpper()).toBe('MANGO')
+        expect('MANG0'.toUpper()).toBe('MANGO')
     })
 
     test('string that contain mixture of upper and lower', () => {
@@ -37,5 +36,23 @@ describe('test for toUpper', () => {
         expect('casti-GATE'.toUpper()).toBe('CASTI-GATE')
     })
 
+})
+
+describe('test for toLower', () => {
+    test('string that is completely uppercase', () => {
+        expect('MERCEDES'.toLower()).toBe('mercedes')
+    })
+
+    test('string that is completely uppercase', () => {
+        expect('MANG0'.toLower()).toBe('mango')
+    })
+
+    test('string that contain mixture of upper and lower', () => {
+        expect('CApiTuLAtE'.toLower()).toBe('capitulate')
+    })
+
+    test('string that contain upper at the beginning and lower at the end', () => {
+        expect('CASTI-gate'.toLower()).toBe('casti-gate')
+    })
 
 })
