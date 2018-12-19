@@ -56,3 +56,13 @@ describe('test for toLower', () => {
     })
 
 })
+
+describe('test for ucFirst', () => {
+    test('string that has first letter as lowercase', () => {
+        expect('welcome'.ucFirst()).toBe('Welcome')
+    })
+
+    test('string that has first letter as uppercase', () => {
+        expect('Welcome'.ucFirst()).not.toBe('welcome')
+    })
+})
