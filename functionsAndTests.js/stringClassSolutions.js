@@ -47,7 +47,8 @@ String.prototype.ucFirst = function () {
 }
 
 String.prototype.isQuestion = function () {
-    //Code here
+    let regex = /[?]$/;
+    return (regex.test(this)) ? true : false;
 }
 
 String.prototype.words = function () {
