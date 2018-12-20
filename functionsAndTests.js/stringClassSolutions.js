@@ -16,7 +16,6 @@ String.prototype.toUpper = function () {
             output += element;
         }
     }
-
     return output;
 }
 
@@ -65,7 +64,6 @@ String.prototype.wordCount = function () {
 
 String.prototype.fromCurrency = function () {
     return Number(this.replace(/,/g, ''));
-
 }
 
 String.prototype.inverseCase = function () {
@@ -95,7 +93,6 @@ String.prototype.alternatingCase = function () {
         result.push(character2.toUpperCase());
 
     }
-
     return result.join('');
 }
 
