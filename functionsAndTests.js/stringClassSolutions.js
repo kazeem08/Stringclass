@@ -64,7 +64,19 @@ String.prototype.wordCount = function () {
 }
 
 String.prototype.inverseCase = function () {
-    //Code here
+    let character;
+    let result = '';
+    for (let i = 0; i < this.length; i++) {
+        character = this.charAt(i);
+        if (character === character.toUpperCase()) {
+            result += character.toLowerCase();
+            
+        } else {
+            
+            result += character.toUpperCase();
+        }
+    }
+    return result;
 }
 
 String.prototype.alternatingCase = function () {
