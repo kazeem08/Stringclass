@@ -22,20 +22,20 @@ String.prototype.toUpper = function () {
 
 String.prototype.toLower = function () {
     let regex = /[A-Z]/;
-        let charValue2 = 0;
-            let output = '';
-        for(let element of this){
-            let charValue = element.charCodeAt(0);
-            if(regex.test(element)){
-                charValue2 = charValue + 32;
-                output += String.fromCharCode(charValue2);
-            }
-            else{
-                output += element;
-            }
+    let charValue2 = 0;
+    let output = '';
+    for (let element of this) {
+        let charValue = element.charCodeAt(0);
+        if (regex.test(element)) {
+            charValue2 = charValue + 32;
+            output += String.fromCharCode(charValue2);
         }
-    
-        return output;
+        else {
+            output += element;
+        }
+    }
+
+    return output;
 }
 
 String.prototype.ucFirst = function () {
@@ -63,6 +63,11 @@ String.prototype.wordCount = function () {
     return output.length;
 }
 
+String.prototype.fromCurrency = function () {
+    return Number(this.replace(/,/g, ''));
+
+}
+
 String.prototype.inverseCase = function () {
     let character;
     let result = '';
@@ -70,9 +75,9 @@ String.prototype.inverseCase = function () {
         character = this.charAt(i);
         if (character === character.toUpperCase()) {
             result += character.toLowerCase();
-            
+
         } else {
-            
+
             result += character.toUpperCase();
         }
     }
@@ -89,18 +94,17 @@ String.prototype.alternatingCase = function () {
         result.push(character.toLowerCase());
         result.push(character2.toUpperCase());
 
-
     }
 
     return result.join('');
 }
 
 String.prototype.numberWords = function () {
-    const numberInWords = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    const numberInWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     let output = [];
-    for(i = 0; i < this.length; i++){
-        for(j = 0; j < 10; j++){
-            if(this[i] == j){
+    for (i = 0; i < this.length; i++) {
+        for (j = 0; j < 10; j++) {
+            if (this[i] == j) {
                 //console.log();
                 output.push(numberInWords[j]);
             }
@@ -108,5 +112,6 @@ String.prototype.numberWords = function () {
     }
     return output;
 }
+
 
 module.exports = String;
