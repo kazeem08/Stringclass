@@ -89,7 +89,7 @@ describe('test for words', () => {
 
 describe('test for wordCount', () => {
     test('string that has hyphen', () => {
-        expect('real-madrid is white'.wordCount()).not.toBe('3')
+        expect('real-madrid is white'.wordCount()).toBe('3')
     })
 
     test('string that has digits and letters', () => {
@@ -97,3 +97,12 @@ describe('test for wordCount', () => {
     })
 })
 
+describe('test for fromCurrency', () => {
+    test('string that has one comma', () => {
+        expect('11,225.34'.fromCurrency()).toBe('11225.34')
+    })
+
+    test('string that has more than one comma', () => {
+        expect('234,225,018.45'.fromCurrency()).toBe('234225018.45')
+    })
+})
