@@ -106,3 +106,14 @@ describe('test for fromCurrency', () => {
         expect('234,225,018.45'.fromCurrency()).toBe('234225018.45')
     })
 })
+
+describe('test for inverseCase', () => {
+    test('string that has mixture of upper and lower', () => {
+        expect('MaNiPuLaTe'.inverseCase()).toBe('mAnIpUlAtE')
+    })
+
+    test('string that has hyphen', () => {
+        expect('java-SCRIPT'.inverseCase()).toBe('JAVA-script')
+    })
+})
+
