@@ -127,3 +127,14 @@ describe('test for alternatingCase', () => {
     })
 
 })
+
+describe('test for numberWords', () => {
+    test('string that contains 5 digits', () => {
+        expect('79658'.numberWords()).toBe(['seven', 'nine', 'six', 'five', 'eight'])
+    })
+
+    test('string that contains 1 digit', () => {
+        expect('0'.numberWords()).toBe(['zero'])
+    })
+    
+})
