@@ -58,7 +58,9 @@ String.prototype.words = function () {
 }
 
 String.prototype.wordCount = function () {
-    //Code here
+    let regex = /\w+-*\w*/g;
+    let output = this.match(regex);
+    return output.length;
 }
 
 String.prototype.inverseCase = function () {
