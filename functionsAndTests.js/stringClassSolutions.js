@@ -52,7 +52,9 @@ String.prototype.isQuestion = function () {
 }
 
 String.prototype.words = function () {
-    //Code here
+    let regex = /\w+-*\w*/g;
+    let output = this.match(regex);
+    return output;
 }
 
 String.prototype.wordCount = function () {

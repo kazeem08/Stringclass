@@ -83,7 +83,7 @@ describe('test for words', () => {
     })
 
     test('string that has digits and letters', () => {
-        expect('535363 hello'.words()).toBe(['535363', 'hello'])
+        expect('535363 hello'.words()).toEqual(['535363', 'hello'])
     })
 })
 
