@@ -117,3 +117,13 @@ describe('test for inverseCase', () => {
     })
 })
 
+describe('test for alternatingCase', () => {
+    test('string that starts with an upper case', () => {
+        expect('Onomatopoeia'.alternatingCase()).toBe('oNoMaToPoEiA')
+    })
+
+    test('string that is fully upper case', () => {
+        expect('ENCAPSULATE'.alternatingCase()).toBe('eNcApSuLaTe')
+    })
+
+})
