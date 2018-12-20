@@ -80,7 +80,19 @@ String.prototype.inverseCase = function () {
 }
 
 String.prototype.alternatingCase = function () {
-    //Code here
+    let result = [];
+
+    for (i = 0; i < this.length; i += 2) {
+        character = this.charAt(i);
+        character2 = this.charAt(i + 1)
+
+        result.push(character.toLowerCase());
+        result.push(character2.toUpperCase());
+
+
+    }
+
+    return result.join('');
 }
 
 String.prototype.numberWords = function () {
