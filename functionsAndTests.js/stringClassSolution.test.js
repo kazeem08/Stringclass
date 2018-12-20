@@ -44,7 +44,7 @@ describe('test for toLower', () => {
     })
 
     test('string that is completely uppercase', () => {
-        expect('MANG0'.toLower()).toBe('mango')
+        expect('MANGO'.toLower()).toBe('mango')
     })
 
     test('string that contain mixture of upper and lower', () => {

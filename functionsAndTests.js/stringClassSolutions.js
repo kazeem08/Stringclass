@@ -21,7 +21,21 @@ String.prototype.toUpper = function () {
 }
 
 String.prototype.toLower = function () {
-    //Code here
+    let regex = /[A-Z]/;
+        let charValue2 = 0;
+            let output = '';
+        for(let element of this){
+            let charValue = element.charCodeAt(0);
+            if(regex.test(element)){
+                charValue2 = charValue + 32;
+                output += String.fromCharCode(charValue2);
+            }
+            else{
+                output += element;
+            }
+        }
+    
+        return output;
 }
 
 String.prototype.ucFirst = function () {
